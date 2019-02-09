@@ -1,37 +1,33 @@
-html, body {
+$main-color: rgb(243, 165, 63);
+$off-color: rgb(33, 23, 28);
+
+
+html, body, .container {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 /*      -----
     Navigation Bar
         -----  */
 
 .navigation {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-  height: 55px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 3%;
-  background-color: rgb(33, 23, 28);
+  background-color: $off-color;
 }
 
 .nav-left {
-  display: flex;
   width: 60%;
   align-items: center;
-
 }
 
-.nav-left-links a {
-  padding: 10px;
+.nav-item {
+  padding-left: 10px;
 }
 
 .logo {
@@ -40,49 +36,46 @@ html, body {
 }
 
 .navigation a {
-  color: rgb(243, 165, 63);
+  color: $main-color;
   margin: 0 0 0 3px;
   text-decoration: none;
 }
 
-.tright {
-  display: flex;
-  width: 30%;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.menu {
-  color: rgb(243, 165, 63);
-  text-decoration: none;
+.navigation a.menu{
+  color: $off-color;
+  margin: 0;
   cursor: pointer;
 }
 
 .btn {
   font-size: 18px;
-  background-color: rgb(243, 165, 63);
-  color: rgb(33, 23, 28);
-  padding: 10px 20px;
+  background-color: $main-color;
+  padding: 4px 15px;
   border: none;
   border-radius: 20px;
+}
 
+.sm-menu {
+  margin-top: 30px;
+  font-size: 1.3em;
+}
+.collapsing-link {
+  margin: 5px;
 }
 
 /*      -----
     Social Media Buttons
         -----  */
+
 .sidebar-social {
-  display: flex;
-  flex-direction: column;
   position: absolute;
-  top: 55px;
+  top: 100px;
   left: 0;
 }
 
 .icon-twitter, .icon-facebook {
   margin: 20px 0 0 20px;
   font-size: 40px;
-
 }
 
 .icon-twitter {
@@ -93,7 +86,6 @@ html, body {
   color: #4267b2;
 }
 
-
 /*      -----
     Landing Page
         -----  */
@@ -103,14 +95,13 @@ html, body {
   width: 100%;
   overflow: hidden;
   position: relative;
-
   background-image: url("../img/burger-hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
+// Blur covering home page image
 .landing-page:after {
   content: '';
   width: 103%;
@@ -125,26 +116,25 @@ html, body {
 .inside-blur {
   width: 100%;
   height: 100%;
-  display: flex;
   position: absolute;
   z-index: 1;
-  align-items: center;
-  justify-content: space-around;
+  //display: flex;
+  //align-items: center;
+  //justify-content: space-around;
 }
 
 .logos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(33, 23, 28, 0.5);
+  background-color: rgba(33, 23, 28, .7);
   border-radius: 20px;
+}
+.main-logo {
 
 }
 
 .slogan, .slogan2 {
-  /*color: rgb(243, 165, 63);*/
   margin: 10px;
   color: white;
+  text-align: center;
 }
 
 .slogan2 {
@@ -152,19 +142,19 @@ html, body {
   margin-bottom: 50px;
 }
 
-
 /*      -----
     Signup for newsletter
         -----  */
+.signup {
+  background-color: rgba(33, 23, 28);
 
+}
 .sub-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background-color: rgba(243, 165, 63, .7);
-  border-radius: 20px;
+  background-color: rgba(243, 165, 63, .9);
   padding: 30px;
+  text-align: center;
+  border-radius: 300px;
 }
 
 .sub-box input {
@@ -178,13 +168,76 @@ html, body {
 
 .footer {
   width: 100%;
+  padding: 0 20px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   position: absolute;
-  bottom: 0
+  bottom: 0;
+  text-align: center;
+  z-index: 2;
 
 }
+
+/*      -----
+        menu
+        -----  */
+
+.menu-page {
+  position: relative;
+  overflow: hidden;
+  text-shadow: 1px 1px #dadfea;
+  padding: 80px 40px 40px 40px;
+}
+
+.menu-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: 100%;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+
+.menu-title, .menu-category, .menu-category-desc {
+  text-align: center;
+}
+
+.item {
+
+}
+.menu-category {
+  margin-top: 32px;
+}
+.item-name {
+  font-weight: bold;
+}
+
+.additions {
+  font-size: 1.7em;
+}
+
+.menu-category-desc {
+  font-style: italic;
+  font-size: .9em;
+}
+.item {
+  margin-bottom: 20px;
+}
+.line-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.item-description {
+  font-style: italic;
+  font-size: .8em;
+  margin-bottom: 4px;
+}
+
 
 //Google Maps
 
@@ -205,15 +258,21 @@ html, body {
 
   }
 }
+
 /* 4x3 Aspect Ratio */
 .iframe-container-4x3 {
   padding-top: 75%;
 }
 
-@media (max-width: 1000px) {
-  .logos {
-    flex-direction: column-reverse;
-  }
+@media screen and (max-width: 1000px) {
 
+
+}
+@media screen and (max-width: 575px) {
+  .sub-box {
+    padding: 20px;
+    text-align: center;
+    border-radius: 60px;
+  }
 }
 

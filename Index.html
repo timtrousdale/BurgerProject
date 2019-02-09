@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rocky Burgers</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -19,6 +20,7 @@
 
     <!-- *** App CSS & JS *** -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script defer src="js/scripts.js"></script>
 </head>
 <body>
 
@@ -26,43 +28,96 @@
     <!-- Top Nav Bar -->
     <!----------------->
 
-    <div class="navigation">
-        <div class="nav-left">
-            <div class="nav-left-links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Jobs</a>
-                <a href="#">FAQs</a>
-                <a href="#">Locations</a>
+    <nav class="navbar navbar-expand navigation fixed-top ">
+        <div class="container-fluid flex-row justify-content-between align-items-center">
+            <div class="nav-left col-6 d-none d-md-flex ">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#jobs">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#locations">Locations</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+                <button class="btn btn-primary d-flex d-md-none" type="button" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu">
+                    <i class="fa fa-bars fa-2x"></i>
+                </button>
+
+                <div class="collapse" id="collapseMenu">
+                    <div class="nav-left col-6 sm-menu">
+                        <ul class="navbar-nav d-flex flex-column justify-content-center">
+                            <li class="nav-item collapsing-link" data-toggle="collapse" data-target="#collapseMenu">
+                                <a class="nav-link" href="#menu">Menu</a>
+                            </li>
+                            <li class="nav-item collapsing-link" data-toggle="collapse" data-target="#collapseMenu">
+                                <a class="nav-link active" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item collapsing-link" data-toggle="collapse" data-target="#collapseMenu">
+                                <a class="nav-link" href="#jobs">Jobs</a>
+                            </li>
+                            <li class="nav-item collapsing-link" data-toggle="collapse" data-target="#collapseMenu">
+                                <a class="nav-link" href="#faq">FAQs</a>
+                            </li>
+                            <li class="nav-item collapsing-link" data-toggle="collapse" data-target="#collapseMenu">
+                                <a class="nav-link" href="#locations">Locations</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tright col-5 d-none d--md-flex justify-content-end align-items-center ">
+                <a class="btn menu" href="#menu">Our Menu
+                </a>
             </div>
         </div>
-        <div class="tright">
-            <!--<a class="menu" href="#">Log In</a>-->
-            <button class="btn menu">Our Menu</button>
-        </div>
-    </div>
+    </nav>
+
+
+    <!-- NAVBAR -->
+
+
+    </nav>
 
     <!------------------>
     <!-- Landing Page -->
     <!------------------>
+    <div class="landing-page" id="home">
+        <div class="inside-blur d-flex flex-row align-items-center justify-content-center">
 
-    <div class="landing-page">
-        <div class="inside-blur">
-            <div class="sidebar-social">
+            <!-- Sidebar -->
+            <div class="sidebar-social d-flex flex-column">
                 <!-- TODO put in proper links-->
                 <a href="http://www.twitter.com/keyburgers" target="_blank"><i class="icon-twitter fab fa-twitter"></i></a>
                 <a href="http://www.facebook.com/keyburgers" target="_blank"><i class="icon-facebook fab fa-facebook"></i></a>
             </div>
-            <div class="logos">
-                <img alt="rocky burgers logo" class="main-logo" src="img/rockeyburgers01-logo3.png"/>
-                <h1 class="slogan">Best Quality Burgers in Town</h1>
+
+            <!-- Main Logo-->
+            <div class="logos d-flex flex-column align-items-center col-6 col-offset-2">
+                <img alt="rocky burgers logo" class="main-logo w-100" src="img/rockeyburgers01-logo-final.png"/>
+                <h3 class="slogan">Best Quality Burgers in Town</h3>
                 <p class="slogan2"> Off the Charts</p>
             </div>
+        </div>
+    </div>
 
-            <form>
-                <div class="sub-box">
-                    <h1> Subscribe Today!</h1>
-                    <h2>Don't miss out on discounts</h2>
+
+    <div class="signup">
+        <!-- Newsletter Signup -->
+        <form>
+            <div class="sub-box d-flex flex-column align-items-center justify-content-center ">
+                <h1> Subscribe Today!</h1>
+                <h2>Don't miss out on discounts</h2>
+                <div class="d-flex flex-column flex-lg-row justify-content-center">
                     <div class="sub-fullname">
                         <input type="text" placeholder="Full Name">
                     </div>
@@ -72,13 +127,147 @@
                     <div class="sub-phone">
                         <input type="tel" placeholder="Phone Number">
                     </div>
-                    <input class="sub-submit" type="submit">
                 </div>
-            </form>
-        </div>
+                <input class="sub-submit" type="submit">
+            </div>
+        </form>
     </div>
-    <div class="footer">
-        <p>All Rights Reserved Rocky Mountain Burger&copy 2019</p>
+
+
+    <!------------------->
+    <!--   Menu Page   -->
+    <!------------------->
+
+
+    <div class="menu-page" id="menu">
+        <img src="./img/menu_1920.jpg" class="menu-background"/>
+        <h1 class="menu-title">Menu</h1>
+        <div class="container-fluid Menu">
+            <div class="row">
+                <div class="menu-section col-md-4 offset-md-2">
+                    <h2 class="menu-category">Burgers & Sandwiches</h2>
+                    <p class="menu-category-desc">Our Burgers are cooked medium and are very juicy!</p>
+                    <div class="item">
+                        <p class="line-item"><span class="item-name">Rockey Burger</span><span class="price">8.25</span>
+                        </p>
+                        <p class="item-description">two 4 oz. patties, with awesome sauce</p>
+                        <p class="line-item">
+                            <span class="addition">+ cheese</span><span class="addition-price">.75</span>
+                        </p>
+                        <p class="line-item">
+                            <span class="addition">+ bacon</span><span class="addition-price">.75</span>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p class="line-item"><span class="item-name">Super Burger</span><span class="price">5.75</span>
+                        </p>
+                        <p class="item-description">4 oz. patty, with awesome sauce</p>
+                        <p class="line-item">
+                            <span class="addition">+ cheese</span><span class="addition-price">.75</span>
+                        </p>
+                        <p class="line-item">
+                            <span class="addition">+ bacon</span><span class="addition-price">.75</span>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p class="line-item"><span class="item-name">Chicken Sandwich</span><span class="price">8</span>
+                        </p>
+                        <p class="item-description">natural free range chicken breast with chipotle aioli</p>
+                        <p class="line-item">
+                            <span class="addition">+ jack cheese</span><span class="addition-price">.5</span></p>
+                        <p class="line-item">
+                            <span class="addition">+ bacon</span><span class="addition-price">1.25</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-section col-md-4  offset-md-1">
+                    <h2 class="menu-category additions">Extras</h2>
+                    <p class="menu-category-desc">Make it just how you like it!</p>
+
+                    <p class="line-item"><span class="addition">lettuce</span><span class="price">-</span></p>
+                    <p class="line-item"><span class="addition">tomato</span><span class="price">-</span></p>
+                    <p class="line-item"><span class="addition">red onion</span><span class="price">-</span></p>
+                    <p class="line-item"><span class="addition">jalape&#241;os</span><span class="price">-</span></p>
+                    <p class="line-item"><span class="addition">grilled onions</span><span class="price">-</span></p>
+                    <p class="line-item"><span class="addition">housemade pickles</span><span class="price">-</span></p>
+                    <p class="line-item"><span class="addition">avocado</span><span class="price">1.25</span></p>
+                    <p class="line-item"><span class="addition">bacon</span><span class="price">1.25</span></p>
+                    <p class="line-item"><span class="addition">roasted portabello</span><span class="price">1.25</span>
+                    </p>
+                    <p class="line-item"><span class="addition">organic egg</span><span class="price">1.5</span></p>
+                </div>
+
+
+                <div class="menu-section col-md-4 offset-md-2">
+                    <h2 class="menu-category">Fries</h2>
+                    <p class="menu-category-desc">Delicious freshly peeled potatoes fries</p>
+                    <div class="item">
+                        <p class="line-item"><span class="item-name">French Fries</span><span class="price">2.75</span>
+                        </p>
+                        <p class="line-item">
+                            <span class="addition">+ super sauce</span><span class="addition-price">.5</span>
+                        </p>
+                        <p class="line-item">
+                            <span class="addition">+ housemade mayo</span><span class="addition-price">.5</span>
+                        </p>
+                        <p class="line-item">
+                            <span class="addition">+ chipotle</span><span class="addition-price">.5</span>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p class="line-item">
+                            <span class="item-name">Garlic French Fries</span><span class="price">3.5</span></p>
+                        <p class="line-item">
+                            <span class="addition">+ super sauce</span><span class="addition-price">.5</span>
+                        </p>
+                        <p class="line-item">
+                            <span class="addition">+ housemade mayo</span><span class="addition-price">.5</span>
+                        </p>
+                        <p class="line-item">
+                            <span class="addition">+ chipotle</span><span class="addition-price">.5</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-section col-md-4 offset-md-1">
+                    <h2 class="menu-category">Desserts</h2>
+                    <p class="menu-category-desc">Rockey Creamery organic soft serve ice cream</p>
+                    <div class="item">
+                        <p class="line-item"><span class="item-name">Cone</span><span class="price">3.75</span></p>
+                        <p class="item-description">choice of vanilla, chocolate, or swirled</p>
+
+                    </div>
+                    <div class="item">
+                        <p class="line-item">
+                            <span class="item-name">Chocolate Dipped Cone</span><span class="price">4.5</span>
+                        </p>
+                        <p class="item-description">choice of vanilla, chocolate, or swirled</p>
+                    </div>
+                    <div class="item">
+                        <p class="line-item"><span class="item-name">Shake</span><span class="price">4.75</span></p>
+                        <p class="item-description">choice of vanilla, chocolate, or swirled</p>
+                        <p class="line-item">
+                            <span class="addition">+ cookies & cream</span><span class="addition-price">1</span>
+                        </p>
+                        <p class="line-item">
+                            <span class="addition">+ fresh strawberries</span><span class="addition-price">1</span></p>
+                        <p class="line-item">
+                            <span class="addition">+ chocolate chips</span><span class="addition-price">1</span>
+                        </p>
+                        <p class="line-item"><span class="addition">+ malt</span><span class="addition-price">.5</span>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p class="line-item"><span class="item-name">Kid's Shake</span><span class="price">PRICE</span>
+                        </p>
+                        <p class="item-description">choice of vanilla, chocolate, or swirled</p>
+                        <p class="line-item"><span class="addition">+ malt</span><span class="addition-price">.5</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -86,7 +275,7 @@
     <!--     Jobs      -->
     <!------------------->
 
-    <div class="jobs-page">
+    <div class="jobs-page" id="jobs">
 
         <h2>Join our great team!</h2>
         <!-- TODO Form and Inputs -->
@@ -109,7 +298,7 @@
     <!------------------->
     <!--   FAQ Page    -->
     <!------------------->
-    <div class="faq-page">
+    <div class="faq-page" id="faq">
 
         <!-- TODO (click and reveal feature)-->
 
@@ -128,7 +317,7 @@
     <!--   Locations   -->
     <!------------------->
 
-    <div class="locations-page">
+    <div class="locations-page" id="locations">
         <!-- TODO GOOGLE MAPS inserted here -->
         <!-- Instructions said to use tables...so I did-->
         <div class="gmap-containerhjgfj jh  iframe-container-4x3">
@@ -202,102 +391,11 @@
             </tr>
             </tbody>
         </table>
+    </div>
 
 
-        <!------------------->
-        <!--   Menu Page   -->
-        <!------------------->
-
-
-        <div class="menu-page">
-            <div class="container">
-                <h1>Food Menu</h1>
-                <div class="menu-section">
-                    <h2>Burgers + Sandwiches</h2>
-                    <p>Our Burgers are cooked medium and are very juicy!</p>
-                    <div class="item">
-                        <p><span class="item-name">Rockey Burger...</span><span class="price">8.25</span></p>
-                        <p class="item-description">two 4 oz. patties, with awesome sauce</p>
-                        <p><span class="addition">+cheese</span><span class="addition-price">.75</span></p>
-                        <p><span class="addition">+bacon</span><span class="addition-price">.75</span></p>
-                    </div>
-                    <div class="item">
-                        <p><span class="item-name">Super Burger</span><span class="price">5.75</span></p>
-                        <p class="item-description">4 oz. patty, with awesome sauce</p>
-                        <p><span class="addition">+cheese</span><span class="addition-price">.75</span></p>
-                        <p><span class="addition">+bacon</span><span class="addition-price">.75</span></p>
-                        <p class="item-addition"></p>
-                    </div>
-                    <div class="item">
-                        <p><span class="item-name">Chicken Sandwich</span><span class="price">8</span></p>
-                        <p class="item-description">natural free range chicken breast with chipotle aioli</p>
-                        <p><span class="addition">+jack cheese</span><span class="addition-price">.5</span></p>
-                        <p><span class="addition">+bacon</span><span class="addition-price">1.25</span></p>
-                    </div>
-                </div>
-                <div class="menu-section">
-                    <h1>toppings</h1>
-                    <div>
-                        <h2>free</h2>
-                        <p>lettuce</p>
-                        <p>tomato</p>
-                        <p>red onion</p>
-                        <p>jalape&#241;os</p>
-                        <p>grilled onions</p>
-                        <p>housemade pickles</p>
-                    </div>
-                    <div>
-                        <h2>Extra</h2>
-                        <p><span class="addition"></span>avocado<span class="price">1.25</span></p>
-                        <p><span class="addition"></span>bacon<span class="price">1.25</span></p>
-                        <p><span class="addition"></span>roasted portabello<span class="price">1.25</span></p>
-                        <p><span class="addition"></span>organic egg<span class="price">1.5</span></p>
-                    </div>
-
-                </div>
-                <div class="menu-section">
-                    <h2>Fries</h2>
-                    <p>Delicious freshly peeled potatoes fries</p>
-                    <p><span class="item-name">French Fries</span><span class="price">2.75</span></p>
-                    <p><span class="addition">+super sauce</span><span class="addition-price">.5</span></p>
-                    <p><span class="addition">+housemade mayo</span><span class="addition-price">.5</span></p>
-                    <p><span class="addition">+chipotle</span><span class="addition-price">.5</span></p>
-
-                    <p><span class="item-name">French Fries</span><span class="price">3.5</span></p>
-                    <p><span class="addition">+super sauce</span><span class="addition-price">.5</span></p>
-                    <p><span class="addition">+housemade mayo</span><span class="addition-price">.5</span></p>
-                    <p><span class="addition">+chipotle</span><span class="addition-price">.5</span></p>
-                </div>
-                <div class="menu-section">
-                    <h2>Desserts</h2>
-                    <p>Rockey Creamery organic soft serve ice cream</p>
-                    <div class="item">
-                        <p><span class="item-name">Cone</span><span class="price">3.75</span></p>
-                        <p class="item-description">choice of vanilla, chocolate, or swirled</p>
-
-                    </div>
-                    <div class="item">
-                        <p><span class="item-name">Chocolate Dipped Cone</span><span class="price">4.5</span></p>
-                        <p class="item-description">choice of vanilla, chocolate, or swirled</p>
-                    </div>
-                    <div class="item">
-                        <p><span class="item-name">Shake</span><span class="price">4.75</span></p>
-                        <p class="item-description">choice of vanilla, chocolate, or swirled</p>
-                        <p><span class="addition">+cookies & cream</span><span class="addition-price">1</span></p>
-                        <p><span class="addition">+fresh strawberries</span><span class="addition-price">1</span></p>
-                        <p><span class="addition">+chocolate chips</span><span class="addition-price">1</span></p>
-                        <p><span class="addition">+malt</span><span class="addition-price">.5</span></p>
-                    </div>
-                    <div class="item">
-                        <p><span class="item-name">Kid's Shake</span><span class="price">PRICE</span></p>
-                        <p class="item-description">choice of vanilla, chocolate, or swirled</p>
-                        <p><span class="addition">+malt</span><span class="addition-price">.5</span></p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
+    <div class="footer fixed-bottom">
+        <p>All Rights Reserved Rocky Mountain Burger&copy 2019</p>
     </div>
 
 </body>

@@ -1,34 +1,28 @@
-html, body {
+html, body, .container {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*      -----
     Navigation Bar
         -----  */
 .navigation {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-  height: 55px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 3%;
   background-color: #21171c;
 }
 
 .nav-left {
-  display: flex;
   width: 60%;
   align-items: center;
 }
 
-.nav-left-links a {
-  padding: 10px;
+.nav-item {
+  padding-left: 10px;
 }
 
 .logo {
@@ -42,36 +36,35 @@ html, body {
   text-decoration: none;
 }
 
-.tright {
-  display: flex;
-  width: 30%;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.menu {
-  color: #f3a53f;
-  text-decoration: none;
+.navigation a.menu {
+  color: #21171c;
+  margin: 0;
   cursor: pointer;
 }
 
 .btn {
   font-size: 18px;
   background-color: #f3a53f;
-  color: #21171c;
-  padding: 10px 20px;
+  padding: 4px 15px;
   border: none;
   border-radius: 20px;
+}
+
+.sm-menu {
+  margin-top: 30px;
+  font-size: 1.3em;
+}
+
+.collapsing-link {
+  margin: 5px;
 }
 
 /*      -----
     Social Media Buttons
         -----  */
 .sidebar-social {
-  display: flex;
-  flex-direction: column;
   position: absolute;
-  top: 55px;
+  top: 100px;
   left: 0;
 }
 
@@ -116,25 +109,19 @@ html, body {
 .inside-blur {
   width: 100%;
   height: 100%;
-  display: flex;
   position: absolute;
   z-index: 1;
-  align-items: center;
-  justify-content: space-around;
 }
 
 .logos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(33, 23, 28, 0.5);
+  background-color: rgba(33, 23, 28, 0.7);
   border-radius: 20px;
 }
 
 .slogan, .slogan2 {
-  /*color: rgb(243, 165, 63);*/
   margin: 10px;
   color: white;
+  text-align: center;
 }
 
 .slogan2 {
@@ -145,14 +132,16 @@ html, body {
 /*      -----
     Signup for newsletter
         -----  */
+.signup {
+  background-color: #21171c;
+}
+
 .sub-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background-color: rgba(243, 165, 63, 0.7);
-  border-radius: 20px;
+  background-color: rgba(243, 165, 63, 0.9);
   padding: 30px;
+  text-align: center;
+  border-radius: 300px;
 }
 
 .sub-box input {
@@ -166,11 +155,71 @@ html, body {
 
 .footer {
   width: 100%;
+  padding: 0 20px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   position: absolute;
   bottom: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+/*      -----
+        menu
+        -----  */
+.menu-page {
+  position: relative;
+  overflow: hidden;
+  text-shadow: 1px 1px #dadfea;
+  padding: 80px 40px 40px 40px;
+}
+
+.menu-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: 100%;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.menu-title, .menu-category, .menu-category-desc {
+  text-align: center;
+}
+
+.menu-category {
+  margin-top: 32px;
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.additions {
+  font-size: 1.7em;
+}
+
+.menu-category-desc {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.line-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.item-description {
+  font-style: italic;
+  font-size: 0.8em;
+  margin-bottom: 4px;
 }
 
 .gmap-container {
@@ -190,9 +239,11 @@ html, body {
   padding-top: 75%;
 }
 
-@media (max-width: 1000px) {
-  .logos {
-    flex-direction: column-reverse;
+@media screen and (max-width: 575px) {
+  .sub-box {
+    padding: 20px;
+    text-align: center;
+    border-radius: 60px;
   }
 }
 
