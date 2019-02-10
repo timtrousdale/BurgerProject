@@ -280,18 +280,20 @@
             <!-- TODO Form and Inputs -->
             <form id="job-info">
                 <div class="inputs d-flex flex-column justify-content-center">
-                    <div class="job-inputs d-flex flex-column flex-md-row justify-content-center">
+                    <div class="job-inputs d-flex flex-column
+                    flex-md-row justify-content-center">
                         <input name="first" type="text" placeholder="First Name">
                         <input name="last" type="text" placeholder="Last Name">
                     </div>
-                    <div class="job-inputs d-flex flex-column flex-md-row justify-content-center">
+                    <div class="job-inputs d-flex flex-column
+                    flex-md-row justify-content-center">
                         <input name="address1" type="text" placeholder="Street Address">
                         <input name="address2" type="text" placeholder="Address Line 2">
                     </div>
-                    <div class="job-inputs d-flex flex-column flex-md-row justify-content-center align-items-center">
+                    <div class="job-inputs d-flex flex-column flex-md-row justify-content-center ">
                         <input name="zip" type="text" placeholder="Zip">
                         <select name="state">
-                            <option value="" selected="selected">State</option>
+                            <option value="" selected="selected">Select State</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>
@@ -344,7 +346,7 @@
                             <option value="WY">Wyoming</option>
                         </select>
                     </div>
-                    <div class="job-inputs d-flex flex-column flex-md-row justify-content-center align-items-center">
+                    <div class="job-inputs d-flex flex-column flex-md-row justify-content-center ">
                         <input name="tel" type="tel" placeholder="Phone Number">
                         <input name="email" type="email" placeholder="Email">
                     </div>
@@ -359,9 +361,9 @@
                         <textarea name="work2" placeholder=""></textarea>
                     </div>
                     <div class="avail d-flex flex-column">
-                        <p>Availability:</p>
+                        <p class="text">Availability:</p>
 
-                        <div class="d-flex flex-column flex-md-row justify-content-around">
+                        <div class="d-flex flex-column justify-content-center flex-md-row  justify-content-md-around">
                             <div class="checkbox-text">Daytime<input type="checkbox" name="day" value="day"/></div>
                             <div class="checkbox-text">Evenings<input type="checkbox" name="evening" value="evening"/>
                             </div>
