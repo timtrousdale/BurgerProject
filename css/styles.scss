@@ -41,7 +41,7 @@ html {
   text-decoration: none;
 }
 
-.navigation a.menu{
+.navigation a.menu {
   color: $off-color;
   margin: 0;
   cursor: pointer;
@@ -54,11 +54,15 @@ html {
   border: none;
   border-radius: 20px;
 }
+.tright {
+  
+}
 
 .sm-menu {
   margin-top: 30px;
   font-size: 1.3em;
 }
+
 .collapsing-link {
   margin: 5px;
 }
@@ -127,6 +131,7 @@ html {
   background-color: rgba(33, 23, 28, .7);
   border-radius: 20px;
 }
+
 .main-logo {
 
 }
@@ -149,12 +154,13 @@ html {
   background-color: rgba(33, 23, 28);
 
 }
+
 .sub-box {
   justify-content: center;
   background-color: rgba(243, 165, 63, .9);
   padding: 30px;
   text-align: center;
-  border-radius: 300px;
+  border-radius: 150px;
 }
 
 .sub-box input {
@@ -188,6 +194,10 @@ html {
   overflow: hidden;
   text-shadow: 1px 1px #dadfea;
   padding: 80px 40px 40px 40px;
+
+  h1 {
+    font-size: 4em;
+  }
 }
 
 .menu-background {
@@ -208,9 +218,11 @@ html {
 .item {
 
 }
+
 .menu-category {
   margin-top: 32px;
 }
+
 .item-name {
   font-weight: bold;
 }
@@ -223,9 +235,11 @@ html {
   font-style: italic;
   font-size: .9em;
 }
+
 .item {
   margin-bottom: 20px;
 }
+
 .line-item {
   display: flex;
   justify-content: space-between;
@@ -239,23 +253,143 @@ html {
 }
 
 
+/*      -----
+        jobs
+        -----  */
+.job-page {
+  position: relative;
+  overflow: hidden;
+  background-color: $main-color;
+
+
+  .job-box {
+    padding: 80px 40px 40px 40px;
+    background-color: $off-color;
+    border-radius: 150px;
+
+    h1 {
+      font-size: 4em;
+    }
+
+
+    .checkbox-text, p {
+      color: #ffffff;
+    }
+
+    .checkbox-text {
+      padding: 15px;
+
+      input {
+        margin-left: 10px;
+      }
+    }
+
+    .job-inputs {
+
+      input {
+        width: 175px;
+        margin: 15px;
+      }
+
+    }
+
+    select {
+      width: 175px;
+      margin: 15px;
+
+    }
+
+    .work-history-box {
+      margin-top: 50px;
+
+      .work-history {
+        text-align: center;
+      }
+    }
+
+    .fit-box {
+      p {
+        text-align: center;
+      }
+    }
+
+
+    .avail {
+      margin-top: 50px;
+      margin-bottom: 30px;
+
+
+      p {
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+.job-title {
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.job-info input {
+
+}
+
+
+/*      -----
+        faqs
+        -----  */
+.faq-page {
+  background-color: $main-color;
+  padding: 60px 40px 40px 40px;
+
+  .faq-title {
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
+    color: #ffffff
+  }
+
+  .card {
+    margin: 20px;
+
+    .card-header {
+      cursor: pointer;
+    }
+  }
+}
+
+
 //Google Maps
 
+.locations-page {
+  background-color: $off-color;
+  padding: 60px 40px 80px 40px;
+  color: #ffffff;
 
-.gmap-container {
-  overflow: hidden;
-  padding-top: 56.25%;
-  //
-  //height: 500px;
-  //width: 600px;
 
-  iframe {
-    position: absolute;
-    left: 100px;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 4em;
+  }
+
+  .map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    margin: 80px 100px 40px 100px
+  }
+
+  .map-responsive iframe {
+    left: 0;
     top: 0;
     height: 100%;
     width: 100%;
-
+    position: absolute;
   }
 }
 
@@ -268,10 +402,16 @@ html {
 
 
 }
+
 @media screen and (max-width: 575px) {
   .sub-box {
     padding: 20px;
     text-align: center;
+    border-radius: 60px;
+  }
+
+  .sub-box {
+    padding: 20px;
     border-radius: 60px;
   }
 }

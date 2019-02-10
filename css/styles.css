@@ -141,7 +141,7 @@ html {
   background-color: rgba(243, 165, 63, 0.9);
   padding: 30px;
   text-align: center;
-  border-radius: 300px;
+  border-radius: 150px;
 }
 
 .sub-box input {
@@ -173,6 +173,9 @@ html {
   overflow: hidden;
   text-shadow: 1px 1px #dadfea;
   padding: 80px 40px 40px 40px;
+}
+.menu-page h1 {
+  font-size: 4em;
 }
 
 .menu-background {
@@ -222,16 +225,105 @@ html {
   margin-bottom: 4px;
 }
 
-.gmap-container {
+/*      -----
+        jobs
+        -----  */
+.job-page {
+  position: relative;
   overflow: hidden;
-  padding-top: 56.25%;
+  background-color: #f3a53f;
 }
-.gmap-container iframe {
-  position: absolute;
-  left: 100px;
+.job-page .job-box {
+  padding: 80px 40px 40px 40px;
+  background-color: #21171c;
+  border-radius: 150px;
+}
+.job-page .job-box h1 {
+  font-size: 4em;
+}
+.job-page .job-box .checkbox-text, .job-page .job-box p {
+  color: #ffffff;
+}
+.job-page .job-box .checkbox-text {
+  padding: 15px;
+}
+.job-page .job-box .checkbox-text input {
+  margin-left: 10px;
+}
+.job-page .job-box .job-inputs input {
+  width: 175px;
+  margin: 15px;
+}
+.job-page .job-box select {
+  width: 175px;
+  margin: 15px;
+}
+.job-page .job-box .work-history-box {
+  margin-top: 50px;
+}
+.job-page .job-box .work-history-box .work-history {
+  text-align: center;
+}
+.job-page .job-box .fit-box p {
+  text-align: center;
+}
+.job-page .job-box .avail {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.job-page .job-box .avail p {
+  text-align: center;
+  margin: 0;
+}
+
+.job-title {
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+/*      -----
+        faqs
+        -----  */
+.faq-page {
+  background-color: #f3a53f;
+  padding: 60px 40px 40px 40px;
+}
+.faq-page .faq-title {
+  font-weight: bold;
+  font-size: 4em;
+  text-align: center;
+  color: #ffffff;
+}
+.faq-page .card {
+  margin: 20px;
+}
+.faq-page .card .card-header {
+  cursor: pointer;
+}
+
+.locations-page {
+  background-color: #21171c;
+  padding: 60px 40px 80px 40px;
+  color: #ffffff;
+}
+.locations-page h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+}
+.locations-page .map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  margin: 80px 100px 40px 100px;
+}
+.locations-page .map-responsive iframe {
+  left: 0;
   top: 0;
   height: 100%;
   width: 100%;
+  position: absolute;
 }
 
 /* 4x3 Aspect Ratio */
@@ -243,6 +335,11 @@ html {
   .sub-box {
     padding: 20px;
     text-align: center;
+    border-radius: 60px;
+  }
+
+  .sub-box {
+    padding: 20px;
     border-radius: 60px;
   }
 }

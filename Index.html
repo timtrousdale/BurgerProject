@@ -52,7 +52,7 @@
                 </button>
 
                 <div class="collapse" id="collapseMenu">
-                    <div class="nav-left col-6 sm-menu">
+                    <div class="nav-left sm-menu">
                         <ul class="navbar-nav d-flex flex-column justify-content-center">
                             <li class="nav-item collapsing-link" data-toggle="collapse" data-target="#collapseMenu">
                                 <a class="nav-link" href="#menu">Menu</a>
@@ -74,19 +74,16 @@
                 </div>
             </div>
 
+        </div>
 
-            <div class="tright col-5 d-none d--md-flex justify-content-end align-items-center ">
-                <a class="btn menu" href="#menu">Our Menu
-                </a>
-            </div>
+        <div class="tright d-none d-md-flex flex-row justify-content-center align-items-center ">
+            <a class="btn menu" href="#menu">Our Menu</a>
         </div>
     </nav>
 
 
     <!-- NAVBAR -->
 
-
-    </nav>
 
     <!------------------>
     <!-- Landing Page -->
@@ -140,6 +137,7 @@
 
 
     <div class="menu-page" id="menu">
+        <!-- Image is from pixabay.com and is is a free license for commercial use with no royalty or attribution-->
         <img src="./img/menu_1920.jpg" class="menu-background"/>
         <h1 class="menu-title">Menu</h1>
         <div class="container-fluid Menu">
@@ -275,41 +273,140 @@
     <!--     Jobs      -->
     <!------------------->
 
-    <div class="jobs-page" id="jobs">
+    <div class="job-page" id="jobs">
+        <div class="job-box container-fluid d-flex flex-column align-items-center">
 
-        <h2>Join our great team!</h2>
-        <!-- TODO Form and Inputs -->
-        Name: (2 Text Fields) First Name, Last Name
-        Address: (2 Text Fields) Street Address and Address Line 2 City: Text Field
-        State: Drop-down Field listing all 50 states
-        Zip Code: Text Field
-        Phone: Text Field
-        Email: Email Field
+            <h1 class="job-title">Join our great team!</h1>
+            <!-- TODO Form and Inputs -->
+            <form id="job-info">
+                <div class="inputs d-flex flex-column justify-content-center">
+                    <div class="job-inputs d-flex flex-column flex-md-row justify-content-center">
+                        <input name="first" type="text" placeholder="First Name">
+                        <input name="last" type="text" placeholder="Last Name">
+                    </div>
+                    <div class="job-inputs d-flex flex-column flex-md-row justify-content-center">
+                        <input name="address1" type="text" placeholder="Street Address">
+                        <input name="address2" type="text" placeholder="Address Line 2">
+                    </div>
+                    <div class="job-inputs d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <input name="zip" type="text" placeholder="Zip">
+                        <select name="state">
+                            <option value="" selected="selected">State</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                    <div class="job-inputs d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <input name="tel" type="tel" placeholder="Phone Number">
+                        <input name="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="work-history-box d-flex flex-column">
+                        <p class="work-history">Tell us about your last two jobs.</p>
+                        <p class="work-history">What did you do?</p>
+                        <p class="work-history">Who did you work for?</p>
+                        <p class="work-history">How long were you there?</p>
+                    </div>
+                    <div class="job-inputs d-flex flex-column">
+                        <textarea name="work1" placeholder=""></textarea>
+                        <textarea name="work2" placeholder=""></textarea>
+                    </div>
+                    <div class="avail d-flex flex-column">
+                        <p>Availability:</p>
 
-        Work History
-        Tell us about your last two jobs. What did you do? Who did you work for? How long were you there? (2 multi-line fields)
-        Availability
-        Daytime: (checkbox)
-        Evenings: (checkbox) Anytime: (checkbox)
-        What makes you a great fit? (1 multi-line field)
+                        <div class="d-flex flex-column flex-md-row justify-content-around">
+                            <div class="checkbox-text">Daytime<input type="checkbox" name="day" value="day"/></div>
+                            <div class="checkbox-text">Evenings<input type="checkbox" name="evening" value="evening"/>
+                            </div>
+                            <div class="checkbox-text">Anytime<input type="checkbox" name="anytime" value="anytime"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fit-box d-flex flex-column">
+                        <p class="text">What makes you a great fit?</p>
+                        <textarea name="fit" placeholder=""></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 
 
     <!------------------->
     <!--   FAQ Page    -->
     <!------------------->
-    <div class="faq-page" id="faq">
-
-        <!-- TODO (click and reveal feature)-->
-
-        <h2>Why is your Rockey Burger So Expensive?</h2>
-        <p>We focus on making meals with the best and freshest ingredients, like humanely-raised beef that is ground fresh each day, organic chicken, and Rockey Family Dairy’s organic cream for our ice cream cones, sundaes and shakes.</p>
-        <p>Our commitment to freshness and quality means higher prices than you’d find at traditional fast-food burger chains. It also means food that tastes way better — because, well, it is.</p>
-
-        <!-- TODO (click and reveal feature)-->
-
-        <h2>Where does your beef come from?</h2>
-        <p>We source our humanely-raised, vegetarian-fed beef from local, family-owned ranches. We use an 85% to 15% protein to fat blend, a mixture of the lean protein and the marbling found on in a cut of steak for our ground beef. The mixture is ground daily, and thus, our burgers taste so amazing.</p>
+    <div class="faq-page d-flex flex-column justify-content-center" id="faq">
+        <h1 class="faq-title">FAQ</h1>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#question1" aria-expanded="true" aria-controls="question1">
+                    <h5>Why is your Rockey Burger So Expensive?</h5>
+                </div>
+                <div id="question1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>We focus on making meals with the best and freshest ingredients, like humanely-raised beef that is ground fresh each day, organic chicken, and Rockey Family Dairy’s organic cream for our ice cream cones, sundaes and shakes.</p>
+                        <p>Our commitment to freshness and quality means higher prices than you’d find at traditional fast-food burger chains. It also means food that tastes way better — because, well, it is.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#question2" aria-expanded="false" aria-controls="question2">
+                    <h5>Where does your beef come from?</h5>
+                </div>
+                <div id="question2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>We source our humanely-raised, vegetarian-fed beef from local, family-owned ranches. We use an 85% to 15% protein to fat blend, a mixture of the lean protein and the marbling found on in a cut of steak for our ground beef. The mixture is ground daily, and thus, our burgers taste so amazing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -318,85 +415,86 @@
     <!------------------->
 
     <div class="locations-page" id="locations">
-        <!-- TODO GOOGLE MAPS inserted here -->
+        <h1 class="faq-title">Locations</h1>
         <!-- Instructions said to use tables...so I did-->
-        <div class="gmap-containerhjgfj jh  iframe-container-4x3">
-            <iframe src="https://maps.google.com/maps?q=346%20Murray%20Lane%2C%20sandy%2C%20ut&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <div class="map-responsive">
+            <iframe src="https://maps.google.com/maps?q=346%20Murray%20Lane%2C%20sandy%2C%20ut&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" marginheight="0" marginwidth="0"></iframe>
         </div>
-        <table>
-            <thead>
-            <tr>
-                <th>Downtown Salt Lake City</th>
-                <th>Sandy</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>346 Kearns Street,</td>
-                <td>346 Murray Lane,</td>
-            </tr>
-            <tr>
-                <td>Salt Lake City, UT 84111</td>
-                <td>Sandy, UT 84093</td>
-            </tr>
-            <tr>
-                <td>Mon – Fri 11am to 8pm</td>
-                <td>Mon – Fri 11am to 8pm</td>
-            </tr>
-            <tr>
-                <td>Sat 10am to 8pm</td>
-                <td>Sat 10am to 8pm</td>
-            </tr>
-            <tr>
-                <td>Closed Sundays</td>
-                <td>Closed Sundays</td>
-            </tr>
-            <tr>
-                <td>801-677-0070</td>
-                <td>801-777-0070</td>
-            </tr>
-            </tbody>
-        </table>
-        <table>
-            <thead>
-            <tr>
-                <th>Lehi</th>
-                <th>Provo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1205 Cabela Drive,</td>
-                <td>841 N University Ave,</td>
-            </tr>
-            <tr>
-                <td>Lehi, UT 8403</td>
-                <td>Provo, UT 84604</td>
-            </tr>
-            <tr>
-                <td>Mon – Fri 11am to 8pm</td>
-                <td>Mon – Fri 11am to 8pm</td>
-            </tr>
-            <tr>
-                <td>Sat 10am to 8pm</td>
-                <td>Sat 10am to 8pm</td>
-            </tr>
-            <tr>
-                <td>Closed Sundays</td>
-                <td>Closed Sundays</td>
-            </tr>
-            <tr>
-                <td>801-777-0070</td>
-                <td>801-777-0070</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+        <div class="map-box container-fluid d-flex flex-column align-items-center">
+            <table>
+                <thead>
+                <tr>
+                    <th>Downtown Salt Lake City</th>
+                    <th>Sandy</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>346 Kearns Street,</td>
+                    <td>346 Murray Lane,</td>
+                </tr>
+                <tr>
+                    <td>Salt Lake City, UT 84111</td>
+                    <td>Sandy, UT 84093</td>
+                </tr>
+                <tr>
+                    <td>Mon – Fri 11am to 8pm</td>
+                    <td>Mon – Fri 11am to 8pm</td>
+                </tr>
+                <tr>
+                    <td>Sat 10am to 8pm</td>
+                    <td>Sat 10am to 8pm</td>
+                </tr>
+                <tr>
+                    <td>Closed Sundays</td>
+                    <td>Closed Sundays</td>
+                </tr>
+                <tr>
+                    <td>801-677-0070</td>
+                    <td>801-777-0070</td>
+                </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                <tr>
+                    <th>Lehi</th>
+                    <th>Provo</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1205 Cabela Drive,</td>
+                    <td>841 N University Ave,</td>
+                </tr>
+                <tr>
+                    <td>Lehi, UT 8403</td>
+                    <td>Provo, UT 84604</td>
+                </tr>
+                <tr>
+                    <td>Mon – Fri 11am to 8pm</td>
+                    <td>Mon – Fri 11am to 8pm</td>
+                </tr>
+                <tr>
+                    <td>Sat 10am to 8pm</td>
+                    <td>Sat 10am to 8pm</td>
+                </tr>
+                <tr>
+                    <td>Closed Sundays</td>
+                    <td>Closed Sundays</td>
+                </tr>
+                <tr>
+                    <td>801-777-0070</td>
+                    <td>801-777-0070</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 
 
-    <div class="footer fixed-bottom">
-        <p>All Rights Reserved Rocky Mountain Burger&copy 2019</p>
-    </div>
+        <div class="footer fixed-bottom">
+            <p>All Rights Reserved Rocky Mountain Burger&copy 2019</p>
+        </div>
 
 </body>
 </html>
