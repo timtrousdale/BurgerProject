@@ -50,6 +50,10 @@ html {
   border-radius: 20px;
 }
 
+.tright {
+  width: 132px;
+}
+
 .sm-menu {
   margin-top: 30px;
   font-size: 1.3em;
