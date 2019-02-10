@@ -335,10 +335,25 @@ html {
   width: 100%;
   position: absolute;
 }
+.locations-page .location-table {
+  margin: 20px;
+  padding: 20px;
+  display: inline;
+  width: auto;
+}
+.locations-page .location-table th, .locations-page .location-table td {
+  background-color: #525459;
+}
+.locations-page .location-table th {
+  padding: 20px 20px 0 20px;
+}
+.locations-page .location-table td {
+  padding: 0 20px 20px 20px;
+}
 
-/* 4x3 Aspect Ratio */
-.iframe-container-4x3 {
-  padding-top: 75%;
+table {
+  border-collapse: separate;
+  border-spacing: 40px 0;
 }
 
 @media screen and (max-width: 575px) {
@@ -354,7 +369,15 @@ html {
   }
 
   .locations-page .map-responsive {
-    margin: 80px 0px 40px 0px;
+    margin: 80px 0 40px 0;
+  }
+
+  .location-table {
+    background-color: #525459;
+    width: 220px;
+    margin: 20px;
+    padding: 20px;
+    display: inline;
   }
 }
 
