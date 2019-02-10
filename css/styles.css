@@ -302,13 +302,31 @@ html {
   font-weight: bold;
   font-size: 4em;
   text-align: center;
-  color: #ffffff;
+  color: #21171c;
 }
 .faq-page .card {
   margin: 20px;
 }
 .faq-page .card .card-header {
   cursor: pointer;
+}
+.faq-page .video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  width: 100%;
+}
+.faq-page .video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.faq-page .know-more {
+  color: #21171c;
+  padding: 30px;
 }
 
 .locations-page {
@@ -371,13 +389,21 @@ table {
   .locations-page .map-responsive {
     margin: 80px 0 40px 0;
   }
-
-  .location-table {
+  .locations-page table.location-table {
     background-color: #525459;
-    width: 220px;
-    margin: 20px;
-    padding: 20px;
-    display: inline;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .locations-page table.location-table thead, .locations-page table.location-table tbody, .locations-page table.location-table tr, .locations-page table.location-table th, .locations-page table.location-table td {
+    padding: 0;
+    width: 100%;
+  }
+  .locations-page table.location-table table {
+    border-spacing: 0 0;
   }
 }
 
